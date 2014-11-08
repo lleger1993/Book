@@ -1,17 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package org.acld.model;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 
-/**
- * @author joseluis
- */
 public class Country {
 
     private Long id;

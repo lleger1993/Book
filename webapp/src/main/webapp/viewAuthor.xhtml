@@ -7,7 +7,7 @@
       xmlns:p="http://primefaces.org/ui"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 <h:head>
-    <title>Listado de usuarios</title>
+    <title>Listado de autores</title>
 </h:head>
 
 <style>
@@ -22,37 +22,25 @@
 <h:body>
     <ui:composition template="/templates/master.xhtml">
         <ui:define name="title">
-            <h2 class="page-header">Listado de usuarios</h2>
+            <h2 class="page-header">Listado de autores</h2>
         </ui:define>
         <ui:define name="content">
             <f:metadata>
-                <f:viewAction action="#{managedBeanUser.init}" onPostback="false"></f:viewAction>
+                <f:viewAction action="#{managedBeanViewAuthor.init}" onPostback="false"></f:viewAction>
             </f:metadata>
 
-            <p:dataTable value="#{managedViewUserBeam.users}" var="user">
+            <p:dataTable value="#{managedViewAuthorBeam.authors}" var="author">
 
                 <p:column headerText="Nombre">
-                    <h:outputText value="#{user.nombre}"></h:outputText>
+                    <h:outputText value="#{author.firstName}"></h:outputText>
                 </p:column>
 
                 <p:column headerText="Apellido">
-                    <h:outputText value="#{user.apellido}"></h:outputText>
-                </p:column>
-
-                <p:column headerText="Cedula">
-                    <h:outputText value="#{user.cedula}"></h:outputText>
-                </p:column>
-
-                <p:column headerText="Email">
-                    <h:outputText value="#{user.email}"></h:outputText>
+                    <h:outputText value="#{author.lastName}"></h:outputText>
                 </p:column>
 
                 <p:column headerText="Fecha Necimiento">
-                    <h:outputText value="#{user.fechaNacimiento}"></h:outputText>
-                </p:column>
-
-                <p:column headerText="Ciudad">
-                    <h:outputText value="#{user.country.nombre}"></h:outputText>
+                    <h:outputText value="#{author.birthDate}"></h:outputText>
                 </p:column>
 
             </p:dataTable>

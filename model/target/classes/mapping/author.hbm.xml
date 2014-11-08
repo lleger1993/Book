@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="org.acld.model.Author" table="author">
+        <id name="id" column="author_id">
+            <generator class="native"></generator>
+        </id>
+        <property name="firstName" column="first_name" type="java.lang.String"></property>
+        <property name="lastName" column="last_name" type="java.lang.String"></property>
+        <property name="birthDate" column="birth_date" type="java.util.Date"></property>
+
+
+        <set name="books" inverse="true">
+            <key column="author_id" not-null="true"/>
+            <one-to-many class="org.acld.model.Book"/>
+        </set>
+    </class>
+</hibernate-mapping>

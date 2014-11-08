@@ -16,8 +16,7 @@
         <property name="cedula" column="user_cedula" type="java.lang.String"></property>
         <property name="email" column="user_email" type="java.lang.String"></property>
         <property name="fechaNacimiento" column="user_fecha_nacimiento" type="java.util.Date"></property>
-        <many-to-one name="country" column="country_id" class="org.acld.model.Country" lazy="false"
-                     fetch="join"></many-to-one>
+        <many-to-one name="country" column="country_id" class="org.acld.model.Country" lazy="false" fetch="join"></many-to-one>
     </class>
 
 </hibernate-mapping>

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package org.acld.service;
 
@@ -12,12 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
-
-/**
- *
- * @author joseluis
- */
 
 @Service("userService")
 public class UserService {
@@ -29,8 +18,8 @@ public class UserService {
         userDAO.save(user);
     }
 
-    public User findbyId(Long id){
-        return  userDAO.findbyId(id);
+    public User findById(Long id){
+        return  userDAO.findById(id);
     }
 
     public List<User> findAll(){

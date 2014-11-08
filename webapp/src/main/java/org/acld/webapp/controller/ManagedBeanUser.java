@@ -1,11 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package org.acld.webapp.controller;
-
 
 import org.acld.model.Country;
 import org.acld.model.User;
@@ -18,11 +12,6 @@ import javax.faces.bean.ViewScoped;
 import java.io.Serializable;
 import java.util.List;
 
-
-/**
- *
- * @author joseluis
- */
 @ManagedBean(name="managedBeanUser")
 @ViewScoped
 public class ManagedBeanUser implements Serializable {
@@ -47,13 +36,8 @@ public class ManagedBeanUser implements Serializable {
     @ManagedProperty(value = "#{configuration}")
     private Configuration configuration;
    
-    /**
-     * Creates a new instance of ManagedBeanUser
-     */
     public ManagedBeanUser() {
     }
-
-
 
     @PostConstruct
     public void init(){

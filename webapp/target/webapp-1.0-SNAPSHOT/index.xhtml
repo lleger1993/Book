@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+    <title>Incio</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+    <script type="text/javascript" src="./resources/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="#{request.contextPath}/resources/bootstrap/css/bootstrap.min.css"
+          type="text/css"></link>
+</h:head>
+<h:body>
+    <ui:composition template="/templates/master.xhtml">
+        <ui:define name="title">
+            <h2 class="page-header">Inicio</h2>
+        </ui:define>
+        <ui:define name="content">
+            <p>Esta es la pagina principal</p>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>
+

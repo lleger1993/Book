@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+    <title>Book</title>
+    <h:outputScript library="lib/bootstrap/js" name="bootstrap.min.js" target="body"/>
+    <h:outputStylesheet library="lib/bootstrap/css" name="bootstrap.min.css"/>
+    <h:outputStylesheet library="lib/bootstrap/css" name="bootstrap-theme.min.css"/>
+    <h:outputStylesheet library="css" name="dashboard.css"/>
+</h:head>
+<h:body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Book App 1.0</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Search..."></input>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><h:link outcome="index" value="Inicio"/></li>
+                    <li><h:link outcome="viewUser" value="Listado de autores"/></li>
+                    <li><h:link outcome="viewLibro" value="Listado de libros"/></li>
+                </ul>
+                <ul class="nav nav-sidebar">
+                    <li><h:link outcome="createUser" value="Registro de autor"/></li>
+                    <li><h:link outcome="createLibro" value="Registro de libros"/></li>
+                </ul>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                    <ui:insert name="title">
+                    </ui:insert>
+                <ui:insert name="content">
+                </ui:insert>
+            </div>
+        </div>
+    </div>
+</h:body>
+</html>
+

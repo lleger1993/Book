@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="org.acld.model.Libro" table="book_libro">
+        <id name="id" column="libro_id">
+            <generator class="native"></generator>
+        </id>
+
+        <property name="titulo" column="libro_titulo" type="java.lang.String"/>
+        <property name="isbn" column="libro_isbn" type="java.lang.String" unique="true"/>
+        <property name="descripcion" column="libro_descripcion" type="java.lang.String"/>
+        <property name="edi" column="libro_edi" type="java.lang.String"/>
+        <property name="lenguaje" column="libro_lenguaje" type="java.lang.String"/>
+        <property name="editor" column="libro_editor" type="java.lang.String"/>
+        <property name="fecha" column="libro_fecha" type="java.util.Date"/>
+        <property name="cantidadPaginas" column="libro_paginas" type="java.lang.Integer"/>
+        <many-to-one name="autor" column="user_id" class="org.acld.model.User" lazy="false" fetch="join"/>
+    </class>
+
+</hibernate-mapping>
